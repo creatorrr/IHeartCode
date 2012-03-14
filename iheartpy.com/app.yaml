@@ -1,0 +1,132 @@
+#######################
+## App Configuration ##
+#######################
+
+# basics
+application: iheartpy
+version: v1
+runtime: python
+api_version: 1
+
+# for browser caching
+default_expiration: "30d"
+
+#######################
+
+handlers:
+
+# public endpoints
+
+- url: /
+  script: handlers/main.py
+
+- url: /resources
+  script: handlers/main.py
+
+- url: /instructions
+  script: handlers/main.py
+
+- url: /wth
+  script: handlers/main.py
+
+- url: /badges
+  script: handlers/badges.py
+
+- url: /download
+  script: handlers/zipme.py
+
+# user endpoints
+
+- url: /shell
+  script: handlers/shell.py
+  login: required
+  auth_fail_action: redirect
+
+- url: /shell.do
+  script: handlers/shell.py
+  login: required
+  auth_fail_action: unauthorized
+
+- url: /shell.delete
+  script: handlers/shell.py
+
+# Google Hangouts
+
+- url: /hangouts
+  script: handlers/shell.py
+
+# Static files
+
+- url: /(.+\.(txt|xml|html))
+  static_files: txt/\1
+  upload: txt/(.+\.(txt|xml|html))
+  expiration: "15d"
+  
+- url: /(.+\.(appcache))
+  static_files: appcache/\1
+  mime_type: text/cache-manifest
+  upload: appcache/(.+\.(appcache))
+  expiration: "15d"
+  
+- url: /(.+\.(gif|png|jpg|ico|jpeg))
+  static_files: site/images/\1
+  upload: site/images/(.+\.(gif|png|jpg|ico|jpeg))
+  expiration: "30d"
+
+- url: /css
+  static_dir: site/css
+  expiration: "30d"
+
+- url: /js
+  static_dir: site/js
+  expiration: "30d"
+
+- url: /images
+  static_dir: site/images
+  expiration: "30d"
+  
+# The rest go to daddy
+
+- url: /.*
+  script: handlers/main.py
+
+#########################
+
+builtins:
+- datastore_admin: on
+- appstats: on
+- remote_api: on
+- admin_redirect: on
+
+#########################
+
+error_handlers:
+  # Catch All
+  - file: error/error.html
+
+  # Over Quota
+  - error_code: over_quota
+    file: error/quota.html
+
+  # DOS Deny
+  - error_code: dos_api_denial
+    file: error/deny.html
+
+  # Server Timeout
+  - error_code: timeout
+    file: error/timeout.html
+
+#########################
+
+skip_files:
+- ^(.*/)?app\.yaml
+- ^(.*/)?app\.yml
+- ^(.*/)?index\.yaml
+- ^(.*/)?index\.yml
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?\..*
+- ^(.*/)?.*\.bak
+- ^(.*/)?.*\.gitignore

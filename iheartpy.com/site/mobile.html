@@ -1,0 +1,79 @@
+`<!doctype html>
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+	<meta name="description" content="IHeartPy - Your friendly next-door Python Instructor!">
+	<meta name="author" content="Diwank Singh Tomer - me [at] thediwank [dot] in">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>I &hearts; Py - {{ title }}</title>
+	<link rel="stylesheet" media="screen" href="/css/mobile.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="apple-touch-startup-image" href="/apple-touch-icon.png">
+	</head>
+	<body>
+	<div id="container">
+		<div class="header">
+			<a href="/"><h1>IHeartPy!</h1></a>
+			<h2> &hearts;The lovable Python Instructor&hearts; </h2>
+			<blockquote>{{ quotation }} - <em>{{ quotation_author }}</em> <a href="{{ quotation_link }}"> [^] </a> </blockquote>
+	</div>
+		<div id="main" role="main">
+		<div class="editor">
+			<h3> Python Interactive Shell </h3>
+			<div id="display">{{ server_software }}
+Python {{ python_version }}
+
+"""Welcome to IHeartPy console.
+Start coding right away.
+Type python commands below and press Submit.
+
+{{ greetings }}"""</div>
+			<form name="shell" action="shell.do" method="get">
+				<textarea id="prompt" name="statement">#Type Away!</textarea>
+				<input id="shellSessionId" type="hidden" name="session" value="{{ session }}" ></input><br/>
+				<input type="submit" value="submit"></input>
+			</form>
+		</div>
+		</div>
+		<hr></hr>
+		<footer>
+		<div class="footer">
+			<div class="links">
+				<span>
+				{% if user %}
+					<a href="{{ logout_url }}"> Adios,  {{ user.nickname }} !</a>
+				{% else %}
+					<a href="{{ login_url }}"> Hola! Login?</a>
+				{% endif %}
+					<a href="/resources">Resources</a>
+					<a href="/instructions"> Instructions </a>
+				</span>
+			</div>
+			<span class="copyright"> Copyright-(2010-12) Creatorrr! Labs <a href="/license.txt"> [^] </a> | Privacy? <a href="/privacy.txt"> [^] </a></span>
+		</div>
+		</footer>
+	</div> <!-- end of #container -->
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '{{analytics_id}}']);
+  _gaq.push(['_setDomainName', 'iheartpy.com']);
+  _gaq.push(['_setAllowHash', false]);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
+  <script>if(!(window.gat_ || window.gat_.getTracker_))document.write('<script src="js/libs/ga.js"><\/script>');</script>
+  	</body>
+</html>

@@ -1,0 +1,23 @@
+# www.robotstxt.org/
+# www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449
+
+User-agent: *
+Allow: /
+Allow: /resources
+Allow: /instructions
+# This is for when they decide to include "Allow" fields in the spec.
+
+User-agent: *
+Disallow: /shell
+# You can't see me.
+
+User-agent: *
+Disallow: /harming/humans
+Disallow: /disobeying/human/orders
+Disallow: /harm/to/self
+# The Three Laws
+
+User-agent: VIKI
+Disallow: /hatching/world/domination
+# Just in case...
+
