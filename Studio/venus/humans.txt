@@ -1,43 +1,44 @@
 /* the humans responsible & colophon */
 /* humanstxt.org */
 
+/* APP */
+  What?: IHeartPy - Your friendly next-door Python Instructor!
+  Why?: For those that seek to be curious.
+  How?: Google App Engine Goodness!!!
 
 /* TEAM */
-  <your title>: <your name>
-  Site:
-  Twitter:
-  Location:
-
+  The Bug Fixer: Diwank Singh Tomer
+      Site: http://singh.diwank.name
+      Twitter: http://twitter.com/meetdagod
+      Location: New Delhi, India
+  
+  Our Voice: Kush Agrawal
+      LinkedIn: http://in.linkedin.com/pub/kush-agrawal/20/222/330
+      Location: UC Berkley
+  
+  The Architect: Sitanshu Raj
+      Blog: http://sitanshu.posterous.com
+      Location: New Delhi, India
+  
+  Inspiration: Ila Nitin Gokarn
+      Location: Singapore Management University, Singapore
+  
+  More: So many more friends, beta-testers, critics. Thanks a ton, people!
+  
 /* THANKS */
-  Names (& URL):
+  Names (& URL): Sydney George Hopkins 		(http://en.wikipedia.org/wiki/Mister_God,_This_Is_Anna#Author),
+                Larry & Sergey			(http://google.com),
+                App-Engine 			(http://code.google.com/appengine),
+                Guido Van Rossum		(http://python.org),
+                Cort Stratton 			(http://pyaiml.sourceforge.net/),
+                Marijn Haverbeke 		(http://github.com/marijnh/CodeMirror2),
+                Paul Irish 			(http://github.com/paulirish/HTML5-Boilerplate),
+                Caleb Troughton 		(http://imakewebthings.github.com/deck.js/),
+                John Resig			(http://jquery.com),
+                Randall Munroe 			(http://xkcd.com/about/)
 
 /* SITE */
   Standards: HTML5, CSS3
-  Components: Modernizr, jQuery
-  Software:
-
-
-
-                               -o/-
-                               +oo//-
-                              :ooo+//:
-                             -ooooo///-
-                             /oooooo//:
-                            :ooooooo+//-
-                           -+oooooooo///-
-           -://////////////+oooooooooo++////////////::
-            :+ooooooooooooooooooooooooooooooooooooo+:::-
-              -/+ooooooooooooooooooooooooooooooo+/::////:-
-                -:+oooooooooooooooooooooooooooo/::///////:-
-                  --/+ooooooooooooooooooooo+::://////:-
-                     -:+ooooooooooooooooo+:://////:--
-                       /ooooooooooooooooo+//////:-
-                      -ooooooooooooooooooo////-
-                      /ooooooooo+oooooooooo//:
-                     :ooooooo+/::/+oooooooo+//-
-                    -oooooo/::///////+oooooo///-
-                    /ooo+::://////:---:/+oooo//:
-                   -o+/::///////:-      -:/+o+//-
-                   :-:///////:-            -:/://
-                     -////:-                 --//:
-                       --                       -:
+  Components: HTML5-Boilerplate, CodeMirror, Deck.js, jQuery
+  Software: Python, AIML
+  Cloud: Google App-Engine
