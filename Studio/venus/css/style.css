@@ -11,8 +11,8 @@ html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10
 html, button, input, select, textarea { font-family: sans-serif; color: #222; }
 body { margin: 0; font-size: 1em; line-height: 1.4; }
 
-::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
-::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::-moz-selection { background: #a157fe; color: #fff; text-shadow: none; }
+::selection { background: #a157fe; color: #fff; text-shadow: none; }
 
 a { color: #00e; }
 a:visited { color: #551a8b; }
@@ -37,7 +37,7 @@ sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: b
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
-ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+
 dd { margin: 0 0 0 40px; }
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 
@@ -73,31 +73,22 @@ td { vertical-align: top; }
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
 
-body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
-
 .wrapper{
 	width:90%;
 	margin:0 5%;
 }
 
 /* ===================
-    ALL: Orange Theme
+    ALL: Venus
    =================== */
 
-#header-container{ border-bottom: 20px solid #e44d26; }
-#footer-container{ border-top:    20px solid #e44d26; }
-#main aside      { border-top:    20px solid #e44d26; }
 
 #header-container,
-#footer-container,
-#main aside{
-	background:#f16529;
+#footer-container{
+    background: transparent;
 }
 
-#title{ color:white; }
 
-::-moz-selection { background: #f16529; color: #fff; text-shadow: none; }
-::selection      { background: #f16529; color: #fff; text-shadow: none; }
 
 /* ==============
     MOBILE: Menu
@@ -108,21 +99,54 @@ nav a{
 	margin-bottom:10px;
 	padding:15px 0;
 
-	background:#e44d26;
+	background:#36280D;
 	color:white;
 
 	text-align:center;
 	text-decoration:none;
+	font-size: 110%;
 	font-weight:bold;
+	
+	border-radius: 3px;
 }
 
 nav a:hover, nav a:visited{
 	color:white;
 }
 
-nav a:hover{
-	text-decoration:underline;
+.options, .description {
+    display: block;
+    list-style: none;
+    list-style-image: none;
+    margin: auto;
+    padding: 0;
+    width: 100%;
 }
+
+
+.options li{
+	display:block;
+	margin:10px;
+
+	color:white;
+	text-align:center;
+    
+	border-radius: 3px;
+}
+
+.options a{
+    display: block;
+	text-decoration:none;
+	padding: 24px;
+	font-size: 200%;
+}
+
+.options a:hover, .options a:visited{
+	color:white;
+}
+
+.options li:first-child { background-color: #b20d1d; }
+.options li:last-child  { background-color: #249a0b; }
 
 /* ==============
     MOBILE: Main
@@ -133,7 +157,8 @@ nav a:hover{
 }
 
 #main article h1{
-	font-size:2em;
+	font-size:2.2em;
+	margin: 0.3em;
 }
 
 #main aside{
@@ -142,8 +167,15 @@ nav a:hover{
 }
 
 #footer-container footer{
-	color:white;
 	padding:20px 0;
+}
+
+header span{
+    display: inline-block;
+    text-align: center;
+    font-size: 1.6em;
+    margin: 1em;
+    font-style: italic;
 }
 
 /* ===============
@@ -157,12 +189,24 @@ nav a:hover{
    Author:
    ========================================================================== */
 
+body{
+    font-family: 'Lato', sans-serif;
+    background: transparent url('../img/bg.png') repeat scroll 0 0;
+}
 
+article header *{
+    margin: auto;
+    text-align: center;
+    font-weight: none;
+}
 
+#title{
+	font-family: 'Short Stack', cursive;
+}
 
-
-
-
+.description{
+    display: none;
+}
 
 
 
@@ -178,16 +222,68 @@ nav a:hover{
    ==================== */
 	
 	nav a{
-		float:left;
+		float:right;
 		width:27%;
-		margin:0 1.7%;
-		padding:25px 2%;
+		margin:3% 1.7%;
+		padding: 2.5% 2%;
 		margin-bottom:0;
 	}
 	
 	nav li:first-child a{ margin-left:0;  }
 	nav li:last-child  a{ margin-right:0; }
+
+	#title{
+    	float: left;
+	}
 	
+	.options{
+	    margin:auto;
+    }
+    
+    .options a{
+	    display: block;
+	}
+	
+	.options li{
+	    display: inline-block;
+	    width: 43%;
+	    padding-top: 20%;
+	    font-size: 180%;
+	}
+	
+	.options{
+    	display: block;
+	}
+	
+	.options *{
+		-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+	}
+
+    .options li:first-child a{ text-align: right; }
+    .options li:last-child a{ text-align: left; }
+
+    .options li:first-child { padding-right:10px; margin-right: 3%; }
+    .options li:last-child { padding-left:10px; margin-left: 3%;}
+
+
+    .description{
+        display:block;
+    }
+    
+    .description ul{
+        float: left;
+    }
+    
+    .options a:hover{
+        opacity: 0.6;
+        background: #111;
+        font-weight: bold;
+    }
+    
 /* ========================
     INTERMEDIATE: IE Fixes
    ======================== */
@@ -203,27 +299,30 @@ nav a:hover{
 @media only screen and (min-width: 768px) {
 
 /* ====================
-    WIDE: CSS3 Effects
+    WIDE: CSS3 Eeedcts
    ==================== */
 
-	#header-container,
-	#main aside{
-		-webkit-box-shadow:0 5px 10px #aaa;
-		   -moz-box-shadow:0 5px 10px #aaa;
-		        box-shadow:0 5px 10px #aaa;
+	#header-container{
+		-webkit-box-shadow:0 1px 10px #aaa;
+		   -moz-box-shadow:0 1px 10px #aaa;
+		        box-shadow:0 1px 10px #aaa;
+	}
+	
+	#footer-container{
+		-webkit-box-shadow:0 -1px 10px #aaa;
+		   -moz-box-shadow:0 -1px 10px #aaa;
+		        box-shadow:0 -1px 10px #aaa;
 	}
 
 /* ============
     WIDE: Menu
    ============ */
 	
-	#title{
-		float:left;
-	}
+
 
 	nav{
 		float:right;
-		width:38%;
+		width:50%;
 	}
 
 /* ============
@@ -231,8 +330,12 @@ nav a:hover{
    ============ */
 
 	#main article{
-		float:left;
-		width:57%;
+        margin: auto;
+		width: 70%;
+	}
+	
+	#title{
+    	float: left;
 	}
 		
 	#main aside{
