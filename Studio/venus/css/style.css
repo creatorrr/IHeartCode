@@ -137,7 +137,8 @@ nav a:active{
 
 .options a{
 	display:block;
-	margin:2.5%;
+
+	margin:auto;
 
 	color:white;
 	text-align:center;
@@ -162,17 +163,17 @@ nav a:active{
 }
 
 
-.options a:first-child { background-color: #b20d1d; }
-.options a:last-child  { background-color: #249a0b; }
+.options a:first-child { background-color: #b20d1d;}
+.options a:last-child  { background-color: #249a0b;}
 
 .description ul{
     display: block;
-    margin: 0 2.5%;
+    margin: 1% 2.5%;
     font-size: 120%;
     width: 45%;
     font-weight:bold;
     line-height: 1.5em;
-    margin-bottom: 1em;
+    margin-bottom: 1.2em;
 }
 
 .description ul:first-child li{
@@ -311,7 +312,7 @@ article header *{
 	
 	.options a{
 	    display: inline-block;
-	    width: 43%;
+	    width: 45%;
 	    padding-top: 20%;
 	    font-size: 180%;
 	}
