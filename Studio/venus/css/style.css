@@ -1,4 +1,93 @@
 /* =============================================================================
+   Font Awesome : http://fortaweso.me
+   ========================================================================== */
+   
+   @font-face {
+    font-family: 'FontAwesome';
+    src: url('../font/fontawesome-webfont.eot');
+    src: url('../font/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('../font/fontawesome-webfont.woff') format('woff'), url('../font/fontawesome-webfont.ttf') format('truetype'), url('../font/fontawesome-webfont.svgz#FontAwesomeRegular') format('svg'), url('../font/fontawesome-webfont.svg#FontAwesomeRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* sprites.less reset */
+[class^="icon-"], [class*=" icon-"] {
+    display: inline;
+    width: auto;
+    height: auto;
+    line-height: inherit;
+    vertical-align: baseline;
+    background-image: none;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+}
+li[class^="icon-"], li[class*=" icon-"] {
+    display: block;
+}
+/*  Font Awesome styles
+    ------------------------------------------------------- */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+}
+a [class^="icon-"], a [class*=" icon-"] {
+    display: inline-block;
+    text-decoration: inherit;
+}
+/* makes the font 33% larger relative to the icon container */
+.icon-large:before {
+    vertical-align: top;
+    font-size: 1.3333333333333333em;
+}
+.btn [class^="icon-"], .btn [class*=" icon-"] {
+    /* keeps button heights with and without icons the same */
+    line-height: .9em;
+}
+li [class^="icon-"], li [class*=" icon-"] {
+    display: inline-block;
+    width: 1.25em;
+    text-align: center;
+}
+li .icon-large[class^="icon-"], li .icon-large[class*=" icon-"] {
+    /* 1.5 increased font size for icon-large * 1.25 width */
+    width: 1.875em;
+}
+li[class^="icon-"], li[class*=" icon-"] {
+    margin-left: 0;
+    list-style-type: none;
+}
+li[class^="icon-"]:before, li[class*=" icon-"]:before {
+    text-indent: -2em;
+    text-align: center;
+}
+li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
+    text-indent: -1.3333333333333333em;
+}
+
+.icon-facebook-sign:before      { content: "\f082"; font-size: 1.4em; margin-right: 12px;}
+.icon-twitter-sign:before       { content: "\f081"; font-size: 1.4em; margin-right: 12px;}
+.icon-github-sign:before        { content: "\f092"; font-size: 1.4em; margin-right: 12px;}
+
+.icon-star:before { content: "\f005"; }
+
+.options li:before,
+.options li:after,
+.right a:after,
+nav a:after,
+.description li:before,
+.description li:after{
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 80%;
+    display: inline-block;
+    text-decoration: inherit;
+}
+
+/* =============================================================================
    HTML5 Boilerplate CSS: h5bp.com/css
    ========================================================================== */
 
@@ -101,11 +190,11 @@ nav a{
 	padding:12px 0;
 
 	background: #36280D;
-	color:white;
+	color: #fff;
 
 	text-align:center;
 	text-decoration:none;
-	font-size: 115%;
+	font-size: 120%;
 	font-weight:bold;
 	
 	border-radius: 3px;
@@ -128,6 +217,8 @@ nav a:active{
     background-color: #000;
 }
 
+nav a:after{ content: "\f090"; margin-left: 6px;}
+
 .options, .description ul {
     list-style: none;
     list-style-image: none;
@@ -140,11 +231,13 @@ nav a:active{
 
 	margin:auto;
 
-	color:white;
+	color: #ddd;
 	text-align:center;
 	text-decoration:none;
+	font-weight: bold;
     
 	border-radius: 3px;
+	margin-bottom: 10px;
 }
 
 .options li{
@@ -168,9 +261,9 @@ nav a:active{
 
 .description ul{
     display: block;
-    margin: 1% 2.5%;
+    margin: 2% 4%;
     font-size: 120%;
-    width: 45%;
+    width: 42%;
     font-weight:bold;
     line-height: 1.5em;
     margin-bottom: 1.2em;
@@ -179,6 +272,41 @@ nav a:active{
 .description ul:first-child li{
     text-align: right;
 }
+
+.description ul:first-child li:after{ content: "\f060"; margin: 0 6px; }
+.description ul:last-child li:before{ content: "\f061"; margin: 0 6px; }
+
+/* ==============
+    Share Buttons
+   ============== */
+
+.icon-facebook-sign:hover:before      { color: #3B5998; }
+.icon-twitter-sign:hover:before       { color: #019AD2; }
+.icon-github-sign:hover:before        { color: #839BA9; }
+
+/* ==============
+    FAQ Thingy
+   ============== */
+   
+.right{
+    margin-top: 6px;
+    float: right;
+}
+
+.right a{
+    font-weight: bold;
+}
+
+.right a:hover{
+    border-top: 6px solid #043C6B;
+}
+
+.right a:hover:after{
+    border: none;
+}
+
+.right i{ font-size: 1.2em; margin: 0 10px; }
+/* .right a:first-child:after { content: "\f005"; margin: 0 6px 0 10px; } */
 
 
 /* ==============
@@ -195,14 +323,9 @@ nav a:active{
 	margin: 0.3em;
 }
 
-#main aside{
-	color:white;
-	padding:0px 5% 10px;
-}
 
 #footer-container footer{
-	padding:20px 0;
-	
+	padding:20px 0;	
 }
 
 #footer-container footer a{
@@ -220,7 +343,6 @@ nav a:active{
 }
 header span{
     display: inline-block;
-    text-align: center;
     font-size: 1.6em;
     margin: 0.5em;
     margin-top: -0.5em;
@@ -230,6 +352,8 @@ header span{
     line-height: 120%;
     word-spacing: 2px;
 }
+
+
 
 #title{
 	margin-bottom: 4px;
@@ -293,6 +417,7 @@ article header *{
 		margin:3% 1.7%;
 		padding: 2% 1.5%;
 		margin-bottom:0;
+		font-size: 130%;
 	}
 	
 	nav li:first-child a{ margin-left:0;  }
@@ -315,6 +440,7 @@ article header *{
 	    width: 45%;
 	    padding-top: 20%;
 	    font-size: 180%;
+	    font-weight: normal;
 	}
 	
 	.options{
@@ -342,6 +468,17 @@ article header *{
         border-radius: 3px;
     }
 
+/*    .options a:last-child:hover li:before{
+        content: "\f054";
+        margin: 0 10px;
+    }
+
+    .options a:first-child:hover li:after{
+        content: "\f053";
+        margin: 0 10px;
+    }
+*/
+
     .options a:active{
         background: #111;
 		-webkit-transition: none;
@@ -351,8 +488,6 @@ article header *{
 	        transition: none;
     }
 
-/*    .options li:first-child a:hover{ border-right: 5px solid white; }
-    .options li:last-child a:hover{ border-left: 5px solid white; } */
 
     .description{
         display:block;
@@ -361,6 +496,8 @@ article header *{
     .description ul{
         float: left;
     }
+    
+    
     
 /* ========================
     INTERMEDIATE: IE Fixes
