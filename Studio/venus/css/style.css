@@ -264,7 +264,7 @@ nav a:after{ content: "\f090"; margin-left: 6px;}
 .description ul{
     display: block;
     margin: 2% 4%;
-    font-size: 120%;
+    font-size: 130%;
     width: 42%;
     font-weight:bold;
     line-height: 1.5em;
@@ -301,6 +301,10 @@ nav a:after{ content: "\f090"; margin-left: 6px;}
 
 .right a:hover{
     border-top: 6px solid #043C6B;
+}
+
+.right a:active{
+    border-top: 6px solid #00C322;
 }
 
 .right a:hover:after{
@@ -350,7 +354,8 @@ header span{
     margin-top: -0.5em;
     
     font-style: italic;
-    text-shadow: 0 0 1px #000;
+    /*text-shadow: 0 0 1px #000;*/
+    -webkit-text-stroke: 1px #999;
     line-height: 120%;
     word-spacing: 2px;
 }
@@ -571,7 +576,7 @@ article header *{
         clear: left;
         height: auto;
         
-        font-size: 2em;
+        font-size: 1.8em;
     }
     
 	.gallery *{
@@ -593,9 +598,10 @@ article header *{
         background-color: #FFC000;
 
         text-align: right;
-        line-height: 2.2em;
+        line-height: 2.4em;
         vertical-align: bottom;
-        text-shadow: 0 0 1px #000;
+        /*text-shadow: 0 0 1px #000;*/
+        -webkit-text-stroke: 1px #444;
     }
     
     .gallery div{
@@ -605,10 +611,11 @@ article header *{
         background: #133AAC;
         
         color: #eee;
-        line-height: 2.2em;
+        line-height: 2.4em;
         padding: 6px 12px 0 0;
         vertical-align: bottom;
-        text-shadow: 0 0 1px #aaa;
+        /*text-shadow: 0 0 1px #aaa;*/
+        -webkit-text-stroke: 1px #ddd;
     }
     
     .gallery p{
@@ -618,6 +625,7 @@ article header *{
     
     .gallery em{
         float:right;
+        font-size: 80%;
     }
     
     .gallery a:hover div{
