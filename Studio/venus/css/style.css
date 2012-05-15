@@ -332,7 +332,7 @@ nav a:after{ content: "\f090"; margin-left: 6px;}
 
 #footer-container footer a{
     color: #36280D;
-    font-size: 1.5em;
+    font-size: 1.4em;
     text-decoration: none;
 }
 
@@ -500,67 +500,6 @@ article header *{
         float: left;
     }
 
-/* ==========
-    Gallery
-   ========== */
-    
-    .gallery{
-        display: block;
-        clear: left;
-        height: auto;
-        
-        font-size: 2em;
-    }
-    
-	.gallery *{
-		-webkit-transition: all .2s ease-out;
-	   -moz-transition: all .2s ease-out;
-	    -ms-transition: all .2s ease-out;
-	     -o-transition: all .2s ease-out;
-	        transition: all .2s ease-out;
-	}
-
-    
-    .gallery span{
-        display: inline-block;
-        width: 25%;
-        height: 100%;
-        padding: 8px 12px 0 0;
-        margin-right: 10px;
-
-        background-color: #FFC000;
-
-        text-align: right;
-        line-height: 2.2em;
-        vertical-align: bottom;
-        text-shadow: 0 0 1px #000;
-    }
-    
-    .gallery div{
-        width: 70%;
-        height: 100%;
-        display: inline-block;
-        background: #133AAC;
-        
-        color: #eee;
-        line-height: 2.2em;
-        padding: 8px 12px 0 0;
-        vertical-align: bottom;
-    }
-    
-    .gallery p{
-        display: inline;
-        padding-left: 16px;
-    }
-    
-    .gallery em{
-        float:right;
-    }
-    
-    .gallery a:hover div{
-        border-left: 16px solid #aaa;
-    }
-    
 
 
 /* ========================
@@ -622,6 +561,74 @@ article header *{
 		float:right;
 		width:28%;
 	}
+
+/* ==========
+    Gallery
+   ========== */
+    
+    .gallery{
+        display: block;
+        clear: left;
+        height: auto;
+        
+        font-size: 2em;
+    }
+    
+	.gallery *{
+		-webkit-transition: all .2s ease-out;
+	   -moz-transition: all .2s ease-out;
+	    -ms-transition: all .2s ease-out;
+	     -o-transition: all .2s ease-out;
+	        transition: all .2s ease-out;
+	}
+
+    
+    .gallery span{
+        display: inline-block;
+        width: 25%;
+        height: 100%;
+        padding: 6px 12px 0 0;
+        margin-right: 10px;
+
+        background-color: #FFC000;
+
+        text-align: right;
+        line-height: 2.2em;
+        vertical-align: bottom;
+        text-shadow: 0 0 1px #000;
+    }
+    
+    .gallery div{
+        display: inline-block;
+        width: 70%;
+        height: 100%;
+        background: #133AAC;
+        
+        color: #eee;
+        line-height: 2.2em;
+        padding: 6px 12px 0 0;
+        vertical-align: bottom;
+        text-shadow: 0 0 1px #aaa;
+    }
+    
+    .gallery p{
+        display: inline;
+        padding-left: 16px;
+    }
+    
+    .gallery em{
+        float:right;
+    }
+    
+    .gallery a:hover div{
+        border-left: 16px solid #aaa;
+    }
+
+    .gallery a:active div{
+        border-left: 16px solid #111;
+        background: #111;
+    }
+    
 }
 
 @media only screen and (min-width: 1140px) {
