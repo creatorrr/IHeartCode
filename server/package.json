@@ -21,6 +21,8 @@
     "redis": "~0.7",
     "hiredis": "*",
 
-    "cloudfoundry": "~0.1"
+    "cloudfoundry": "~0.1",
+
+    "xmlhttprequest": "~1.4"
   }
 }
