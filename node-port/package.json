@@ -1,0 +1,31 @@
+{
+  "author": "Diwank Singh Tomer",
+  "name": "iheartcode",
+  "description": "iheartco.de backend",
+  "version": "0.1.0",
+  "homepage": "http://iheartco.de",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iheartcode/brunch-skeleton"
+  },
+  "engines": {
+    "node": "~0.6.10"
+  },
+  "scripts": {
+    "start": "brunch watch --server"
+  },
+  "dependencies": {
+    "javascript-brunch": "> 1.0 < 1.3",
+    "coffee-script-brunch": "> 1.0 < 1.3",
+
+    "css-brunch": "> 1.0 < 1.3",
+    "stylus-brunch": "> 1.0 < 1.3",
+
+    "uglify-js-brunch": "> 1.0 < 1.3",
+    "clean-css-brunch": "> 1.0 < 1.3"
+  },
+  "devDependencies": {
+    "mocha": "0.14.0",
+    "expect.js": "0.1.2"
+  }
+}

@@ -1,0 +1,6 @@
+[submodule "iheartpy.com"]
+	path = iheartpy.com
+	url = https://github.com/creatorrr/IHeartPy.git
+[submodule "Studio"]
+	path = Studio
+	url = https://github.com/creatorrr/iheartcode-studio.git
