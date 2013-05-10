@@ -11,7 +11,7 @@
 * And associated platform for creating interactive content.
 
 ### Why?
-* For those that seek to be cutrious.
+* For those that seek to be curious.
 * Now anyone can learn how to code.
 
 ### How?
